@@ -1,0 +1,232 @@
+:root {
+    --bg: black;
+    --maincolor:white; 
+    --secondary: rgb(202, 151, 20);
+  }
+*{
+    padding:0;
+    margin:0;
+    cursor: default;
+    /* font-family: 'Quattrocento', serif; */
+}
+a{
+    text-decoration: none;
+    color:var(--bg);
+    cursor: pointer;
+}
+html{
+    background-color: var(--bg);
+    color:var(--maincolor);
+    /* width: 5000px; */
+    /* scroll-behavior: smooth; */
+
+}
+header{
+    position: fixed;
+    /* border-bottom: 4px solid var(--secondary); */
+    margin-top: 0;
+    width: 100%;
+    background-color: var(--maincolor);
+    color:var(--bg);
+    display: flex;
+}
+header h1{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding:1em 2em;
+}
+#work a{
+    text-decoration: none;
+    color:black;
+}
+#work a:hover{
+    color:white;
+}
+#contact {
+    flex:3;
+}
+#contact ul {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 48%;
+}
+#contact ul li{
+    flex:0.05;
+    width:80%;
+    display:flex;
+}
+#contact ul li img{
+    width:20px;
+    height:20px;
+    margin-right:8px;
+    filter:contrast(100%);
+    /* filter:grayscale(100%); */
+}
+#contact ul li p{
+    color:var(--bg);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+section{
+    position: relative;
+    top:200px;
+    /* scroll-direction: horizontal; */
+    /* overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; */
+    scroll-behavior: smooth;
+}
+.inline-container{
+    display:flex;
+    width: 100%;
+}
+.inline-container .page{
+    width:1500px;
+    height:650px;
+    border:var(--secondary) 0.5px double;
+    /* padding:10px; */
+    margin:0 100px; 
+}
+
+.inline-container #home{
+    display:flex;
+}
+.inline-container #home #text-container{
+    flex:1;
+    padding-left: 15px;
+}
+.inline-container #home #text-container h2{
+    font-size: 60px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-top:15px;
+    padding-left:5px;
+}
+.inline-container #home #feature-container{
+    flex:2;
+}
+.inline-container #home #text-container h3{
+    font-size:25px;
+    margin-bottom:20px;
+    margin-left: 10px;
+
+    font-family: 'Alegreya Sans', sans-serif;
+
+    font-weight: 600;
+}
+/* //chinese part// */
+#text-container p:nth-child(2n){
+    font-size:18px;
+    margin-left: 10px;
+    margin-top:5px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 200;
+}
+/* //english part// */
+#text-container p{
+    font-size:16px;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+.hook{
+    color:var(--secondary);
+}
+#checkWork{
+    margin-left:10px;
+    margin-top:30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:var(--bg);
+    background-color: var(--maincolor);
+    border: none;
+    padding: 8px 13px;
+    cursor: pointer;
+
+}
+#checkWork:hover{
+    background-color: var(--secondary);
+}
+.inline-container #home #feature-container img{
+    padding-left:5%;
+    width:95%;
+    height:100%;
+    object-fit: cover;
+}
+.inline-container #work{
+    display:flex;
+    flex-direction: column;
+}
+.inline-container #work div{
+    flex:1;
+    text-align: center;
+    margin: 20px 0;
+    padding-top:60px;
+}
+.inline-container #work div, .inline-container #work div h2{
+    cursor: pointer;;
+}
+.inline-container #work div:hover{
+    background-color: var(--maincolor);
+    color: var(--bg);
+}
+.inline-container #work #design:hover{
+    background-image: url('../assets/DTNav.gif');
+    /* background-repeat: no-repeat; */
+    background-size: fill;
+}
+.inline-container #work #graphics:hover{
+    background-image: url('../assets/visualNav.png');
+    background-size: fill;
+}
+.inline-container #work #experienments:hover{
+    background-image: url('../assets/experiNav.jpg');
+    background-size: cover;
+    font-weight: 700;
+}
+nav{
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+ul{
+    display:flex;
+    list-style: none;
+    max-width: 25%;
+    margin: auto;
+    translate: 2s;
+}
+li{
+    flex:1;
+    font-size: 20px;
+    margin: 0 10% 10% 10%;
+    padding: 10px 0px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+li a{
+    color:var(--maincolor);
+    text-decoration: none;
+    padding:2px 10px;
+}
+li a:hover{
+    background-color: var(--maincolor);
+    color: var(--bg);
+    transition: 0.2s;
+    cursor: pointer;
+}
+

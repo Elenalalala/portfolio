@@ -1,0 +1,155 @@
+:root {
+    --bg: white;
+    --maincolor:black; 
+    --secondary: rgb(202, 151, 20);
+  }
+*{
+    padding:0;
+    margin:0;
+    letter-spacing: 0.06em;
+}
+a{
+    text-decoration: none;
+    color:var(--maincolor);
+}
+header{
+    width: 100%;
+    background-color: var(--bg);
+    color:var(--maincolor);
+    display: flex;
+}
+header h1{
+    padding:1em 2em;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+#contact {
+    flex:3;
+}
+#contact ul {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 48%;
+}
+#contact ul li{
+    flex:1;
+    width:80%;
+    display:flex;
+}
+#contact ul li img{
+    width:20px;
+    height:20px;
+    margin-right:8px;
+    filter:contrast(100%);
+    /* filter:grayscale(100%); */
+}
+#contact ul li p{
+    color:var(--maincolor);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+#content{
+    max-width:60%;
+    margin:0 auto;
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    letter-spacing: 0.2em;
+}
+#featureImage img{
+    margin-top:10px;
+    width:100%;
+}
+#title{
+    font-size: 35px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin:10%;
+    margin-bottom: 5%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--maincolor);
+}
+#projectType{
+    font-weight: 400;
+}
+#time{
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+#duration{
+    
+    margin-bottom: 5%;
+}
+#skillSet,#goal-wrapper{
+    text-align: left;
+    /* max-width: 20%; */
+    margin: 0 auto;
+    padding-left:15px;
+    border-left: var(--secondary) 3px solid;
+    margin-bottom: 10%;
+    /* margin-left:20%; */
+}
+#skillSet h3,#goal-wrapper h3{
+    color:var(--secondary);
+    font-size: 30px;
+}
+#skillSet ul,#goal-wrapper ul{
+    font-size: 16px;
+    list-style: none;
+}
+#skillSet ul li{
+    margin:5px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+#goal-wrapper ul li{
+    margin-top:20px;
+}
+#flex-wrapper{
+    display:flex;
+    height:auto;
+}
+
+#link{
+    margin-bottom:10%;
+}
+#description{
+    max-width: 80%;
+    margin: 0 auto;
+}
+#description p{
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+#processImage img{
+    width:80%;
+    height:auto;
+    display:inline-block;
+    margin:20px;
+}
+#productImage img{
+    width:80%;
+    height:auto;
+    display:inline-block;
+    margin:20px;
+}
+button{
+    font-size: 30px;
+    background-color: var(--maincolor);
+    border-style: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button a{
+    color: var(--bg);
+}
+button:hover{
+    background-color: var(--secondary);
+}
