@@ -101,6 +101,7 @@ function loadPage(project){
 function loadFeature(projectName){
     const feature = document.getElementById('featureImage');
     const image = document.createElement('img');
+    image.setAttribute('alt',Feature[projectName]);
     image.src = Feature[projectName];
     feature.appendChild(image);
 }
