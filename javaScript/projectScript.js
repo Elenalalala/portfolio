@@ -2,7 +2,7 @@ const main = document.getElementById('content');
 const Feature = {
     'cornStarch':'cornStarch/product/featureImage.png',
     '5x5':'assets/instaMe.png',
-    'weathering':'Weathering/featureImage.png'
+    'weathering':'weathering/featureImage.png'
 }
 const Title = {
     'cornStarch':'Bioplastics Jewelry Collection: Corn to Cornucopia',
