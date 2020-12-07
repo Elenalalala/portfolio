@@ -19,39 +19,53 @@ h1{
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
-#top{
+header{
+    position: fixed;
+    /* border-bottom: 4px solid var(--secondary); */
+    margin-top: 0;
     width: 100%;
     background-color: var(--bg);
     color:var(--maincolor);
     display: flex;
 }
-#contact {
+header h1{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding:1em 2em;
     flex:3;
+    /* letter-spacing: 0.2em; */
 }
-#contact ul {
+header h1 a{
+    letter-spacing: 0.2em;
+}
+#contact {
+    flex:2;
     display: flex;
-    margin-top: 30px;
-    margin-left: 48%;
+    margin-top: 40px;
+    margin-right:5%;
 }
-#contact ul li{
-    flex:1;
+#contact li{
+    flex:0.5;
     width:80%;
     display:flex;
+    margin-right:8px;
 }
-#contact ul li img{
+#contact li img{
     width:20px;
     height:20px;
     margin-right:8px;
     filter:contrast(100%);
-    /* filter:grayscale(100%); */
+    filter:grayscale(100%);
 }
-#contact ul li p{
+#contact li p{
     color:var(--maincolor);
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 16px;
     text-transform: lowercase;
 }
 nav{
+    background-color: var(--bg);
     position: fixed;
     bottom:0;
     width:100%;
@@ -59,18 +73,20 @@ nav{
 nav ul{
     display:flex;
     list-style: none;
-    max-width: 25%;
+    max-width: 50%;
     margin: auto;
     translate: 2s;
 }
 nav ul li{
     flex:1;
     font-size: 20px;
-    margin: 0 10% 10% 10%;
+    margin: 0 5% 5% 5%;
     padding: 10px 0px;
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
 }
 nav ul li a{
     color:var(--maincolor);
@@ -83,10 +99,10 @@ nav ul li a:hover{
     transition: 0.2s;
     cursor: pointer;
 }
-header{
+section{
     flex:1;
 }
-header ul{
+section ul{
     position: fixed;
     top:40%;
     display:flex;
@@ -95,7 +111,7 @@ header ul{
     width:25%;
     border-right: 1px solid var(--maincolor);
 }
-header ul li{
+section ul li{
     margin-top:20px;
     font-size: 20px;
     text-align: center;
@@ -106,7 +122,7 @@ header ul li{
     font-weight: 300;
     text-transform: uppercase;
 }
-header ul li:hover{
+section ul li:hover{
     cursor: pointer;
     background-color: var(--maincolor);
     color:var(--bg);
@@ -115,14 +131,15 @@ header ul li:hover{
 #flex-wrapper{
     display: flex;
     /* margin: 200px 200px; */
-    margin-top:100px;
+    padding-top:10%;
     margin-left:100px;
     margin-right:100px;
 }
 #content-grid{
     flex:1.2;
     /* border:1px solid black; */
-    height:680px;
+    /* height:680px; */
+    height: 50%;
     width:800px;
     overflow: scroll;
 }
@@ -153,13 +170,17 @@ header ul li:hover{
 #content-grid .drawings:nth-child(4){
     margin-bottom:150px;
 }
+#content-grid .projectPic{
+    margin-bottom:50px;
+}
 #description{
-    position: absolute;
-    z-index:2;
-    top:10vh;
-    right:42vw;
+    position: fixed;
+    /* z-index:2; */
+    top:43%;
+    right:55%;
     width: 200px;
     /* display:flex; */
+    /* border-left: var(--maincolor) 1px solid; */
 }
 #description div, #description p{
     font-size:15px;
@@ -168,41 +189,94 @@ header ul li:hover{
     font-weight: 300;
     
 }
-
-
-/* #content-grid #otherContent h2{
-    margin-top:0;
-    border-bottom: 1px solid var(--maincolor);
-    padding-bottom: 10px;
-    letter-spacing: 0.1em;
-    
-}
-#content-grid #otherContent h3{
-    padding-top: 10px;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-}
-
-#content-grid #otherContent p{
-    padding-top: 10px;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-}
-#content-grid #otherContent{
-    margin: 50px 0;
-}
-#content-grid #otherContent ul{
-    margin: 20px 0;
-}
-#content-grid #otherContent ul li{
-    margin-top: 5px;
-} */
-
 .projectPic{
     width:80%;
     object-fit: cover;
+}
+@media all and (max-width: 1550px){
+    #description{
+        position: fixed;
+        top:20%;
+        right: 55%;
+        width: 150px;
+        height:150px;
+    }
+}
+@media all and (max-width: 760px){
+    header{
+        flex-direction: column;
+    }
+    #contact{
+        flex-direction: column;
+    }
+    section ul li{
+        font-size: 16px;
+    }
+}
+@media all and (max-width: 550px){
+    #flex-wrapper{
+        display:block;
+    }
+    header h1{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    #contact{
+        flex-direction: column;
+        margin: 20px 5px;
+        margin: 0 20%;
+        margin-bottom: 20px;
+    }
+    #contact li p{
+        font-size: 12px;
+    }
+    #contact li img{
+        width:15px;
+        height:15px;
+    }
+    section ul{
+        left:5%;
+        top: 15%;
+        /* flex-direction: row; */
+        border:none;
+        width: 20%;
+        letter-spacing: 0;
+    }
+    section ul li{
+        border-right: var(--maincolor) 1px solid;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        width:50%;
+    }
+    #content-grid{
+        width:100%;
+        flex:3;
+    }
+    #description{
+        top:50%;
+    }
+    #content-grid{
+        width: 250px;
+        height:30%;
+        margin-top:10%;
+    }
+    #content-grid .drawings{
+        margin:0;
+    }
+    #content-grid .drawings:nth-child(1) {
+        margin-top: 100px;
+    }
+    #content-grid .drawings:nth-child(3) {
+        margin-bottom: 0;
+    }
+    #content-grid .drawings:nth-child(4) {
+        margin-bottom: 0;
+    }
+    #content-grid .projectPic{
+        margin-top: 100px;
+        margin-bottom: 0;
+        width:100%;
+    }
+    
+    
 }

@@ -148,14 +148,13 @@ function loadDescription(projectName){
         summary.innerText = element;
         description.appendChild(summary);
     });
-
-    if(Description[projectName].inspiration != ''){
+    if(Description[projectName].inspiration != undefined){
         const inspiration = document.createElement('p');
         inspiration.setAttribute('class','inspiration');
         inspiration.innerText = Description[projectName].inspiration;
         description.appendChild(inspiration);
     }
-    if(Description[projectName].process != ''){
+    if(Description[projectName].process != undefined){
         const process = document.createElement('p');
         process.setAttribute('class','process');
         process.innerText = Description[projectName].process;
