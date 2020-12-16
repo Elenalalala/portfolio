@@ -253,7 +253,7 @@ nav ul li a:hover{
         height:15px;
     }
     #home{
-        height:550px;
+        height:500px;
         width:100%;
         margin: 0 50px;
     }
@@ -271,5 +271,8 @@ nav ul li a:hover{
     }
     .inline-container #home #text-container h2{
         font-size: 40px;
+    }
+    .inline-container .page{
+        height:100%;
     }
 }
