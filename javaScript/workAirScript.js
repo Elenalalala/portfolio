@@ -33,10 +33,6 @@ function loadContent(category){
                             imgName.innerText = name;
                         });
                     kindWrapper.appendChild(image);
-                    // show default project when first landing // style the default categories
-                    mainSection.appendChild(kindWrapper);
-                    kind.style.backgroundColor ='rgb(202, 151, 20)';
-                    kind.style.color = 'white';
                     
 
             }else{
@@ -53,6 +49,12 @@ function loadContent(category){
                         });
                 link.appendChild(image);
                 kindWrapper.appendChild(link);
+                if(category == 'dt'){
+                // show default project when first landing // style the default categories
+                mainSection.appendChild(kindWrapper);
+                kind.style.backgroundColor ='rgb(202, 151, 20)';
+                kind.style.color = 'white';
+                }
             }
         });
     
@@ -67,6 +69,10 @@ function loadContent(category){
     kind.addEventListener('click', ()=>{
         // hide the drawing info when clicking other categories
         // if(category != 'drawing'){
+            //click完之后都变金色
+            kind.style.backgroundColor ='rgb(202, 151, 20)';
+            kind.style.color = 'white';
+
             imgDate.innerText='';
             imgDescr.innerText = '';
             imgName.innerText = '';
@@ -77,9 +83,10 @@ function loadContent(category){
         // const dtKind = document.getElementById('dt');
         // const experimentKind = document.getElementById('experiment');
         // const drawingKind = document.getElementById('drawing');
-        // if(category != drawing){
-        //     drawingKind.style.backgroundColor = 'white';
-        //     drawingkind.style.color = 'black';
+        // if(category != 'dt'){
+        //     kind.style.backgroundColor = 'white';
+        //     kind.style.color = 'black';
+        // }
         // }else{
             // dtKind.style.backgroundColor = 'white';
             // dtkind.style.color = 'black';

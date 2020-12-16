@@ -2,32 +2,44 @@ const main = document.getElementById('content');
 const Feature = {
     'cornStarch':'cornStarch/product/featureImage.png',
     '5x5':'assets/instaMe.png',
-    'weathering':'weathering/featureImage.png'
+    'weathering':'weathering/featureImage.png',
+    'zero':'zero/zero.png',
+    'nine':'nine/nineFeature.png'
 }
 const Title = {
     'cornStarch':'Bioplastics Jewelry Collection: Corn to Cornucopia',
     '5x5':'Insta Me',
-    'weathering':'Weathering with Mars'
+    'weathering':'Weathering with Mars',
+    'zero': 'Emerging future: Zero Hunger',
+    'nine': '九凤: The Nine Phoenix'
 };
 const Time ={
     'cornStarch':'2020 Spring',
     '5x5':'2020 Fall',
-    'weathering':'2020 Spring'
+    'weathering':'2020 Spring',
+    'zero': '2020 Fall',
+    'nine': '2020 Spring'
 }
 const Type ={
     'cornStarch':'Individual Project',
     '5x5':'Individual Project',
-    'weathering':'Individual Project'
+    'weathering':'Individual Project',
+    'zero':'Group Project',
+    'nine': 'Collaboration with CHENYU MA'
 }
 const Duration ={
     'cornStarch':'1 month',
     '5x5':'2.5 weeks',
-    'weathering':'1 week'
+    'weathering':'1 week',
+    'zero':'3 weeks',
+    'nine': '2 weeks'
 }
 const Skill ={
     'cornStarch':['research and experiment', 'hand crafting', 'video production', 'photography', 'styling', 'adobe CC'],
     '5x5':['html/css', 'JavaScript', 'p5.js'],
-    'weathering':['p5.js', 'html/css', 'RiveScript', 'NASA Insight API', 'P5speech.js']
+    'weathering':['p5.js', 'html/css', 'RiveScript', 'NASA Insight API', 'P5speech.js'],
+    'zero':['Figma', 'communication skill', 'graphic design', 'systematic strategy design', 'speculative design'],
+    'nine': ['p5.js','laser cutting','collaboration']
 }
 const Goal ={
     'cornStarch':[
@@ -42,6 +54,12 @@ const Goal ={
     'weathering':[
         'explore audio interaction, basic AI and using API.', 
         'Design UIUX interface'
+    ],
+    'zero':[
+        'Design for a speculative future'
+    ],
+    'nine':[
+        'Explore the effect of tranlating ancient lengend to sonic visualization'
     ]
 }
 const Description ={
@@ -54,7 +72,7 @@ const Description ={
     },
     '5x5':{
         'summary':['Insta Me is a set of explorations of web media in which I express the notion of online self based on my personal instagram data.'],
-        'Inspiration':'',
+        'inspiration':'',
         'process':'',
     },
     'weathering':{
@@ -65,8 +83,40 @@ const Description ={
             
             'This project mainly targets children and younger teenagers, being envisioned in settings like museum interactive displays or educational websites.'
         ],
-        'Inspiration':'',
+        'inspiration':'',
         'process':'',
+    },
+    'zero':{
+        'summary':[
+            'The United Nations posted a zero-hunger challenge that aims to end hunger across the world by 2030. This project aims to design a speculative food system in response to that great vision.',
+        ],
+        'inspiration':'',
+        'process':'',
+        'setting':[
+            'Our world setting happens after 2030 when there is no hunger worldwide and 3D bio-printing technology is highly developed. Due to the advanced research in Material Science, many things can be printed via 3D printers in various scales, for example. clothes, iron pots, houses and even makeups. Personal devices, like phones will be really cheap due to the advanced 3D printing production.',
+            'Combined 3D printing technology with bio-engineered mushroom that is fast-growing, scientists are able to invent fast-growing synthetic stem cells and 3D printers for synthetic food. As a result, people can print out what they want to eat, and the output product will grow into a fresh food.',
+            'We imagine that the future food system is mainly operated by machines and artificial intelligence, therefore it will be most efficient to have some kind of food business platform where consumer can order, share, customized their food.'
+        ],
+        'background':[
+            'This APP is released by the United Nations to better support the Zero Hunger Project. The technology and service is provided by impactful companies and countries. It will be used in poor area where food is scarce. Different than traditional rescue which highly depends on human volunteer labor to distribute the food, the new system will have an automatic order-to-delivery system operated by AI and drone machines. Anyone can order their printed food at home.',
+            'We decided to make an interface stimulating the new 3D bioprinting food service. This will be the app interface they use to print food on their personal devices. Customers can choose what nutrients and what prototype food to print or order a preset in the market. We are stimulating the business model that comes with this new food system.'
+        ],
+        'functionality':[
+            'Order synthetic food preset.',
+            'Check the printing & delivery process.',
+            'Build a community around printed food recipe.',
+            'Encourage creativity and entrepreneurship via experimenting and selling the recipes.'
+        ]
+    },
+    'nine': {
+        'summary': [
+            '九凤: The Nine Phoenix is a sonic visualization base on a customized database. This database contains translation from ancient Chinese myth to music notes. I set up a systematic procedure to translate Chinese characters to music notes. After the translation, I collaborate with my talented friend, Chenyu Ma, who is a music undergrad at UC Riverside, asking him to rearrange the meolody based on my translation.',
+            "I thought about the data source. Letters and characters are a kind of data too. It's a way of expression , encoding meaning, and decoding forms. Data visualization is also a way of unveiling the meaning inside the data source. In a way, words and characters are a kind of data visualization and a kind of data source at the same time. I find this ambivalent duality very interesting. So I want to create my own duality by encoding and decoding the words in the book.",
+            'Here is the original text from the myth:'
+        ],
+        'inspiration':"《山海经·大荒北经》'大荒之中，有山名曰北极柜。海水北注焉。有神九首，人面鸟身，句曰九凤'。In the wilderness, there is a mountain called Mount North Pole (Bei Ji Gui). Ocean water entered here from the North. There was a god who has nine human faces ,but has a bird body, called JIUFENG.",
+
+        'process':'I translates those words into PinYin and create a chart. I followed this chart and translate all words into a number code. I think converting those words into music will be a fun representation. So, I have those translation as the melody. I asked my friend Chengyu Ma who is study in Classical Music to try to compose the chord. Even though he thinks this is a really wired mechanism to compose a piece of music, he try to work with my wired restrictions.',
     }
 }
 const Pics = {
@@ -78,12 +128,20 @@ const Pics = {
     'weathering':{
         'process':['process1.png','process2.png'],
         'product':['weathering.gif']
+    },
+    'zero':'',
+    'nine':{
+        'process':['chart2.jpg'],
+        'product':['nine1.png']
     }
+
 };
 const Link ={
     'cornStarch':'<iframe width="760" height="415" src="https://www.youtube.com/embed/qfNkB9sB-WY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     '5x5':'<button><a href="https://elenalalala.github.io/InstaMe/">Click here to Know more!</a></button>',
-    'weathering':'<button><a href="https://editor.p5js.org/ElenaPeng/present/4PXWmeeWU">Play it yourself!</a></button>'
+    'weathering':'<button><a href="https://editor.p5js.org/ElenaPeng/present/yCSytZkWN">Play it yourself!</a></button>',
+    'zero':'<button><a href="https://www.figma.com/proto/WwgHZUXeUkcYsAB5cOw4zK/Zero-Hunger?node-id=2%3A3&scaling=scale-down">Try it yourself!</a></button>',
+    'nine':'<button><a href="https://editor.p5js.org/ElenaPeng/present/NfQzmGReK">Listen to it Here</a></button>'
 }
 
 function loadPage(project){
@@ -104,6 +162,10 @@ function loadFeature(projectName){
     image.setAttribute('alt',Feature[projectName]);
     image.src = Feature[projectName];
     feature.appendChild(image);
+    if(projectName = 'zero'){
+        image.style.marginTop = '10%';
+        image.style.width = '50%';
+    }
 }
 function loadTitle(projectName){
     const pageTitle = document.getElementById('page-title');
@@ -161,6 +223,52 @@ function loadDescription(projectName){
         process.innerText = Description[projectName].process;
         description.appendChild(process);
     }
+    if(projectName == 'zero'){
+        console.log(projectName);
+        const settingWrapper = document.createElement('div');
+        const Setting = document.createElement('h3');
+        Setting.innerText = 'World Setting';
+        settingWrapper.appendChild(Setting);
+        const backgroundWrapper = document.createElement('div');
+        const Background = document.createElement('h3');
+        Background.innerText = 'Project Background';
+        backgroundWrapper.appendChild(Background);
+
+        Description[projectName].setting.forEach(para =>{
+            const setting = document.createElement('p');
+            setting.innerText = para;
+            settingWrapper.appendChild(setting);
+        });
+        Description[projectName].background.forEach(para =>{
+            const background = document.createElement('p');
+            background.innerText = para;
+            backgroundWrapper.appendChild(background);
+        });
+        
+        
+        
+
+        const functionality = document.createElement('ul');
+        const functionTitle = document.createElement('h3');
+        functionTitle.innerText = 'Main Function';
+        functionality.appendChild(functionTitle);
+
+        Description[projectName].functionality.forEach(list =>{
+            const point = document.createElement('li');
+            point.style.listStyle = 'square';
+            point.style.textAlign = 'left';
+            point.style.width = '270px';
+            point.style.margin = '20px';
+            point.style.marginLeft = '35%';
+            point.innerText = list;
+            functionality.appendChild(point);
+        });
+        const zeroWrapper = document.createElement('section');
+        zeroWrapper.appendChild(settingWrapper);
+        zeroWrapper.appendChild(backgroundWrapper);
+        zeroWrapper.appendChild(functionality);
+        description.appendChild(zeroWrapper);
+    }
     
 }
 function loadImage(projectName){
@@ -168,7 +276,7 @@ function loadImage(projectName){
     const productWrapper = document.createElement('div');
     processWrapper.setAttribute('id','processImage');
     productWrapper.setAttribute('id','productImage');
-    if(projectName == 'cornStarch' || projectName =='weathering'){
+    if(projectName == 'cornStarch' || projectName =='weathering' || projectName == 'nine'){
     Pics[projectName].product.forEach(element => {
         const pic = document.createElement('img');
         pic.src = `${projectName}/product/${element}`;

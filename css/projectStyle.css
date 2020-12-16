@@ -66,6 +66,7 @@ header h1 a{
     text-align: center;
     font-family: 'Alegreya Sans', sans-serif;
     letter-spacing: 0.2em;
+    margin-bottom: 8%;
 }
 #featureImage img{
     margin-top:10px;
@@ -166,7 +167,8 @@ nav{
     position: fixed;
     bottom:0;
     width:100%;
-    background-color: var(--bg);
+    height:50px;
+    background-color: var(--maincolor);
 }
 nav ul{
     display:flex;
@@ -185,13 +187,13 @@ nav ul li{
     text-transform: uppercase;
 }
 nav ul li a{
-    color:var(--maincolor);
+    color:var(--bg);
     text-decoration: none;
     padding:2px 10px;
 }
 nav ul li a:hover{
-    background-color: var(--maincolor);
-    color: var(--bg);
+    background-color: var(--bg);
+    color: var(--maincolor);
     transition: 0.2s;
     cursor: pointer;
 }
