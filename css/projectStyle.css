@@ -164,27 +164,29 @@ button:hover{
     background-color: var(--secondary);
 }
 nav{
+    background-color: var(--maincolor);
     position: fixed;
     bottom:0;
     width:100%;
     height:50px;
-    background-color: var(--maincolor);
 }
 nav ul{
     display:flex;
     list-style: none;
-    max-width: 25%;
+    max-width: 50%;
     margin: auto;
     translate: 2s;
 }
 nav ul li{
     flex:1;
     font-size: 20px;
-    margin: 0 10% 10% 10%;
+    margin: 0 5% 5% 5%;
     padding: 10px 0px;
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
 }
 nav ul li a{
     color:var(--bg);
