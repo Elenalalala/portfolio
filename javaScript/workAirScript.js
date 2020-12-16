@@ -49,12 +49,13 @@ function loadContent(category){
                         });
                 link.appendChild(image);
                 kindWrapper.appendChild(link);
+
                 if(category == 'dt'){
-                // show default project when first landing // style the default categories
-                mainSection.appendChild(kindWrapper);
-                kind.style.backgroundColor ='rgb(202, 151, 20)';
-                kind.style.color = 'white';
-                }
+                    // show default project when first landing // style the default categories
+                    mainSection.appendChild(kindWrapper);
+                    kind.style.backgroundColor ='rgb(202, 151, 20)';
+                    kind.style.color = 'white';
+                    }
             }
         });
     
@@ -70,6 +71,8 @@ function loadContent(category){
         // hide the drawing info when clicking other categories
         // if(category != 'drawing'){
             //click完之后都变金色
+            
+
             kind.style.backgroundColor ='rgb(202, 151, 20)';
             kind.style.color = 'white';
 
