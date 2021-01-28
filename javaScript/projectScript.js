@@ -4,42 +4,48 @@ const Feature = {
     '5x5':'assets/instaMe.png',
     'weathering':'weathering/featureImage.png',
     'zero':'zero/zero.png',
-    'nine':'nine/nineFeature.png'
+    'nine':'nine/nineFeature.png',
+    'mrYellow':'mrYellow/mrYellowFeature.jpg'
 }
 const Title = {
     'cornStarch':'Bioplastics Jewelry Collection: Corn to Cornucopia',
     '5x5':'Insta Me',
     'weathering':'Weathering with Mars',
     'zero': 'Emerging future: Zero Hunger',
-    'nine': '九凤: The Nine Phoenix'
+    'nine': '九凤: The Nine Phoenix',
+    'mrYellow':'Mr. Yellow: Egg Roll Company Branding'
 };
 const Time ={
     'cornStarch':'2020 Spring',
     '5x5':'2020 Fall',
     'weathering':'2020 Spring',
     'zero': '2020 Fall',
-    'nine': '2020 Spring'
+    'nine': '2020 Spring',
+    'mrYellow':'2020 Fall'
 }
 const Type ={
     'cornStarch':'Individual Project',
     '5x5':'Individual Project',
     'weathering':'Individual Project',
     'zero':'Group Project',
-    'nine': 'Collaboration with CHENYU MA'
+    'nine': 'Collaboration with CHENYU MA',
+    'mrYellow':'Individual Project'
 }
 const Duration ={
     'cornStarch':'1 month',
     '5x5':'2.5 weeks',
     'weathering':'1 week',
     'zero':'3 weeks',
-    'nine': '2 weeks'
+    'nine': '2 weeks',
+    'mrYellow':'1 week'
 }
 const Skill ={
     'cornStarch':['research and experiment', 'hand crafting', 'video production', 'photography', 'styling', 'adobe CC'],
     '5x5':['html/css', 'JavaScript', 'p5.js'],
     'weathering':['p5.js', 'html/css', 'RiveScript', 'NASA Insight API', 'P5speech.js'],
     'zero':['Figma', 'communication skill', 'graphic design', 'systematic strategy design', 'speculative design'],
-    'nine': ['p5.js','laser cutting','collaboration']
+    'nine': ['p5.js','laser cutting','collaboration'],
+    'mrYellow':['Adobe Illustrator','Adobe Photoshop']
 }
 const Goal ={
     'cornStarch':[
@@ -60,6 +66,9 @@ const Goal ={
     ],
     'nine':[
         'Explore the effect of tranlating ancient lengend to sonic visualization'
+    ],
+    'mrYellow':[
+        'Design logo and branding for a fake company'
     ]
 }
 const Description ={
@@ -117,6 +126,11 @@ const Description ={
         'inspiration':"《山海经·大荒北经》'大荒之中，有山名曰北极柜。海水北注焉。有神九首，人面鸟身，句曰九凤'。In the wilderness, there is a mountain called Mount North Pole (Bei Ji Gui). Ocean water entered here from the North. There was a god who has nine human faces ,but has a bird body, called JIUFENG.",
 
         'process':'I translates those words into PinYin and create a chart. I followed this chart and translate all words into a number code. I think converting those words into music will be a fun representation. So, I have those translation as the melody. I asked my friend Chengyu Ma who is study in Classical Music to try to compose the chord. Even though he thinks this is a really wired mechanism to compose a piece of music, he try to work with my wired restrictions.',
+    },
+    'mrYellow':{
+        'summary':['This project was designed for Intro to Typography class. Mr.Yellow is a imaginary company that mainly sells egg-related products.'],
+        'inspiration':'',
+        'process':'',
     }
 }
 const Pics = {
@@ -133,6 +147,10 @@ const Pics = {
     'nine':{
         'process':['chart2.jpg'],
         'product':['nine1.png']
+    },
+    'mrYellow':{
+        'process':['MrYellowPresent-01.png','MrYellowPresent-02.png','MrYellowPresent-03.png','MrYellowPresent-04.png','MrYellowPresent-05.png','MrYellowPresent-06.png','MrYellowPresent-07.png','MrYellowPresent-08.png'],
+        'product':['bottle.png','box.png']
     }
 
 };
@@ -141,7 +159,8 @@ const Link ={
     '5x5':'<button><a href="https://elenalalala.github.io/InstaMe/">Click here to Know more!</a></button>',
     'weathering':'<button><a href="https://editor.p5js.org/ElenaPeng/present/yCSytZkWN">Play it yourself!</a></button>',
     'zero':'<button><a href="https://www.figma.com/proto/WwgHZUXeUkcYsAB5cOw4zK/Zero-Hunger?node-id=2%3A3&scaling=scale-down">Try it yourself!</a></button>',
-    'nine':'<button><a href="https://editor.p5js.org/ElenaPeng/present/NfQzmGReK">Listen to it Here</a></button>'
+    'nine':'<button><a href="https://editor.p5js.org/ElenaPeng/present/NfQzmGReK">Listen to it Here</a></button>',
+    'mrYellow':''
 }
 
 function loadPage(project){
@@ -276,7 +295,7 @@ function loadImage(projectName){
     const productWrapper = document.createElement('div');
     processWrapper.setAttribute('id','processImage');
     productWrapper.setAttribute('id','productImage');
-    if(projectName == 'cornStarch' || projectName =='weathering' || projectName == 'nine'){
+    if(projectName == 'cornStarch' || projectName =='weathering' || projectName == 'nine' || projectName == 'mrYellow'){
     Pics[projectName].product.forEach(element => {
         const pic = document.createElement('img');
         pic.src = `${projectName}/product/${element}`;
