@@ -166,7 +166,7 @@ const Pics = {
         'process':['MrYellowPresent-01.png','MrYellowPresent-02.png','MrYellowPresent-03.png','MrYellowPresent-04.png','MrYellowPresent-05.png','MrYellowPresent-06.png','MrYellowPresent-07.png','MrYellowPresent-08.png'],
         'product':['bottle.png','box.png']
     },
-    'mrYellow':{
+    'bubbleGame':{
         'process':['process1.png'],
         'product':['product1.png']
     }
