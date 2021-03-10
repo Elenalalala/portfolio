@@ -5,7 +5,8 @@ const Feature = {
     'weathering':'weathering/featureImage.png',
     'zero':'zero/zero.png',
     'nine':'nine/nineFeature.png',
-    'mrYellow':'mrYellow/mrYellowFeature.jpg'
+    'mrYellow':'mrYellow/mrYellowFeature.jpg',
+    'bubbleGame':'bubbleGame/bubbleFeature.png'
 }
 const Title = {
     'cornStarch':'Bioplastics Jewelry Collection: Corn to Cornucopia',
@@ -13,7 +14,8 @@ const Title = {
     'weathering':'Weathering with Mars',
     'zero': 'Emerging future: Zero Hunger',
     'nine': '九凤: The Nine Phoenix',
-    'mrYellow':'Mr. Yellow: Egg Roll Company Branding'
+    'mrYellow':'Mr. Yellow: Egg Roll Company Branding',
+    'bubbleGame':'Face Detection Shooting Game'
 };
 const Time ={
     'cornStarch':'2020 Spring',
@@ -21,7 +23,8 @@ const Time ={
     'weathering':'2020 Spring',
     'zero': '2020 Fall',
     'nine': '2020 Spring',
-    'mrYellow':'2020 Fall'
+    'mrYellow':'2020 Fall',
+    'bubbleGame':'2020 Spring'
 }
 const Type ={
     'cornStarch':'Individual Project',
@@ -29,7 +32,8 @@ const Type ={
     'weathering':'Individual Project',
     'zero':'Group Project',
     'nine': 'Collaboration with CHENYU MA',
-    'mrYellow':'Individual Project'
+    'mrYellow':'Individual Project',
+    'bubbleGame':'Individual Project'
 }
 const Duration ={
     'cornStarch':'1 month',
@@ -37,7 +41,8 @@ const Duration ={
     'weathering':'1 week',
     'zero':'3 weeks',
     'nine': '2 weeks',
-    'mrYellow':'1 week'
+    'mrYellow':'1 week',
+    'bubbleGame':'1 week'
 }
 const Skill ={
     'cornStarch':['research and experiment', 'hand crafting', 'video production', 'photography', 'styling', 'adobe CC'],
@@ -45,7 +50,8 @@ const Skill ={
     'weathering':['p5.js', 'html/css', 'RiveScript', 'NASA Insight API', 'P5speech.js'],
     'zero':['Figma', 'communication skill', 'graphic design', 'systematic strategy design', 'speculative design'],
     'nine': ['p5.js','laser cutting','collaboration'],
-    'mrYellow':['Adobe Illustrator','Adobe Photoshop']
+    'mrYellow':['Adobe Illustrator','Adobe Photoshop'],
+    'bubbleGame':['P5.js, clmtrackr.js, html/css, JavaScript']
 }
 const Goal ={
     'cornStarch':[
@@ -69,6 +75,9 @@ const Goal ={
     ],
     'mrYellow':[
         'Design logo and branding for a fake company'
+    ],
+    'bubbleGame':[
+        'Explore the possibility of face detection technology.'
     ]
 }
 const Description ={
@@ -131,6 +140,11 @@ const Description ={
         'summary':['This project was designed for Intro to Typography class. Mr.Yellow is a imaginary company that mainly sells egg-related products.'],
         'inspiration':'',
         'process':'',
+    },
+    'bubbleGame':{
+        'summary':['Use your mouth to shoot out bubbles. Do not hit the red square! Use clmtrackr.js, the face detection technology to track the position of your lips.'],
+        'inspiration':'',
+        'process':'',
     }
 }
 const Pics = {
@@ -151,6 +165,10 @@ const Pics = {
     'mrYellow':{
         'process':['MrYellowPresent-01.png','MrYellowPresent-02.png','MrYellowPresent-03.png','MrYellowPresent-04.png','MrYellowPresent-05.png','MrYellowPresent-06.png','MrYellowPresent-07.png','MrYellowPresent-08.png'],
         'product':['bottle.png','box.png']
+    },
+    'mrYellow':{
+        'process':['process1.png'],
+        'product':['product1.png']
     }
 
 };
@@ -160,7 +178,8 @@ const Link ={
     'weathering':'<button><a href="https://editor.p5js.org/ElenaPeng/present/yCSytZkWN">Play it yourself!</a></button>',
     'zero':'<button><a href="https://www.figma.com/proto/WwgHZUXeUkcYsAB5cOw4zK/Zero-Hunger?node-id=2%3A3&scaling=scale-down">Try it yourself!</a></button>',
     'nine':'<button><a href="https://editor.p5js.org/ElenaPeng/present/NfQzmGReK">Listen to it Here</a></button>',
-    'mrYellow':''
+    'mrYellow':'',
+    'bubbleGame':'<button><a href="https://editor.p5js.org/ElenaPeng/sketches/2fkUfAt4_">Play it Yourself</a></button>'
 }
 
 function loadPage(project){
