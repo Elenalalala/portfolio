@@ -314,7 +314,7 @@ function loadImage(projectName){
     const productWrapper = document.createElement('div');
     processWrapper.setAttribute('id','processImage');
     productWrapper.setAttribute('id','productImage');
-    if(projectName == 'cornStarch' || projectName =='weathering' || projectName == 'nine' || projectName == 'mrYellow'){
+    if(projectName == 'cornStarch' || projectName =='weathering' || projectName == 'nine' || projectName == 'mrYellow' || projectName == 'bubbleGame'){
     Pics[projectName].product.forEach(element => {
         const pic = document.createElement('img');
         pic.src = `${projectName}/product/${element}`;
