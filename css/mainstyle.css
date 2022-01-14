@@ -80,18 +80,20 @@ header h1{
 .inline-container{
     display:flex;
     width: 100%;
-    position: relative;
-    top:200px;
-    padding-bottom: 100px;
+    /* position: relative;
+    top:200px; */
+    /* padding-bottom: 10%; */
+    height:100vh;
 }
 .inline-container .page{
     width:1500px;
-    height:650px;
+    height:65vh;
     border:var(--secondary) 0.5px double;
     margin:0 100px; 
 }
 .inline-container #home{
     display:flex;
+    margin-top: 20vh;
 }
 .inline-container #home #text-container{
     margin-bottom: 20px;
