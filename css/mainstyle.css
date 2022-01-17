@@ -126,7 +126,6 @@ header h1{
 }
 /* //chinese part// */
 #text-container p:nth-child(2n){
-    font-size:18px;
     margin-left: 10px;
     margin-top:5px;
     font-size: 16px;
@@ -182,7 +181,6 @@ nav ul{
     list-style: none;
     max-width: 50%;
     margin: auto;
-    translate: 2s;
 }
 nav ul li{
     flex:1;
@@ -212,10 +210,12 @@ nav ul li a:hover{
     }
 
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 855px){
     .inline-container #home{
         display:flex;
         flex-direction: column-reverse;
+        height: 65vh;
+        margin-top: 20vh;
     }
     .inline-container #home #feature-container img{
         padding:0;
@@ -226,16 +226,19 @@ nav ul li a:hover{
         flex:0.5;
         margin-bottom:-50%;
     }
-    #home{
-        height:720px;
-    }
     #contact{
         flex-direction: column;
         margin: 20px 5px;
     }
 
 }
-@media all and (max-width: 450px){
+/* @media all and (min-width: 450px){
+    header h1{
+        padding:1em 0.5em;
+    }
+
+} */
+@media all and (max-width: 570px){
     header{
         display: block;
     }
@@ -254,10 +257,14 @@ nav ul li a:hover{
         width:15px;
         height:15px;
     }
-    #home{
-        height:500px;
+    .inline-container #home{
+        height:60vh;
         width:100%;
         margin: 0 50px;
+        margin-top: 25vh;
+    }
+    nav ul li{
+        font-size: 15px;
     }
     .inline-container #home #feature-container img{
         height:70%;
@@ -272,9 +279,18 @@ nav ul li a:hover{
         margin:10px;
     }
     .inline-container #home #text-container h2{
-        font-size: 40px;
+        font-size: 30px;
+    }
+    .inline-container #home #text-container h3{
+        font-size: 20px;
     }
     .inline-container .page{
         height:100%;
+    }
+    #text-container p{
+        font-size: 14px;
+    }
+    #text-container p:nth-child(2n){
+        font-size: 14px;
     }
 }
