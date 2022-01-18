@@ -146,5 +146,5 @@ function GenerateInfo(){
     let title = clone.getElementById('title');
     let name = clone.getElementById('name');
     let method = clone.getElementById('method');
-    
+    temp.parentNode.appendChild(clone);
 }
