@@ -1,13 +1,15 @@
 var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyYdN7Jur6PIL9sJ'}).base('appSpjcbZHvKRY8O0');
 
-Info();
+// Info();
+
 loadContent('dt');
 loadContent('experiment');
 loadContent('drawing');
 
 
 function loadContent(category){
+    GenerateInfo();
     const kind = document.getElementById(category);
     const mainSection = document.getElementById('content-grid'); 
     const kindWrapper = document.createElement('div');
@@ -42,10 +44,12 @@ function loadContent(category){
                 link.href = `project.html?${projectTitle}`;
                 image.setAttribute('class','projectPic');
                 image.src = record.get('Image')[0].url;
-                        image.addEventListener('mouseover', ()=>{
+                        image.addEventListener('mouseover', function(evt){
                             imgDate.innerText = time;
                             imgDescr.innerText = type;
                             imgName.innerText = note;
+                            evt.target.style.backgroundColor = 'red';
+                            console.log("mouseoverrrrrr");
                         });
                 link.appendChild(image);
                 kindWrapper.appendChild(link);
@@ -62,23 +66,36 @@ function loadContent(category){
     }, function done(err) {
         if (err) { console.error(err); return; }
     });
-    kind.addEventListener('mouseover',()=>{
-        kind.style.backgroundColor ='black';
-        kind.style.color = 'white';
+    kind.addEventListener('mouseover',(evt)=>{
+        evt.target.style.backgroundColor ='black';
+        evt.target.style.color = 'white';
+        // setTimeout(function(){
+        //     evt.target.style.backgroundColor = 'white';
+        //     evt.target.style.color = 'black';
+        // },200);
     });
-    
-    kind.addEventListener('click', ()=>{
+
+    kind.addEventListener('mouseleave',(evt)=>{
+        if(evt.target.style.backgroundColor == 'rgb(202, 151, 20)'){
+            return;
+        }else{
+            evt.target.style.backgroundColor ='white';
+            evt.target.style.color = 'black';
+        }
+    });
+
+    kind.addEventListener('click', (e)=>{
         // hide the drawing info when clicking other categories
         // if(category != 'drawing'){
             //click完之后都变金色
             
 
-            kind.style.backgroundColor ='rgb(202, 151, 20)';
-            kind.style.color = 'white';
+            e.target.style.backgroundColor ='rgb(202, 151, 20)';
+            e.target.style.color = 'white';
 
-            imgDate.innerText='';
-            imgDescr.innerText = '';
-            imgName.innerText = '';
+            // imgDate.innerText='';
+            // imgDescr.innerText = '';
+            // imgName.innerText = '';
             // kind.style.backgroundColor ='';
             // kind.style.color = '';
         // }
@@ -96,31 +113,38 @@ function loadContent(category){
             // drawingKind.style.backgroundColor = 'white';
             // drawingkind.style.color = 'black';
         // kind.style.background
-        kind.style.backgroundColor ='rgb(202, 151, 20)';
-        kind.style.color = 'white';
+        // kind.style.backgroundColor ='white';
+        // kind.style.color = 'black';
         // }
         console.log(kind);
         const mainChild = mainSection.childNodes;
+        console.log(mainChild[0]);
         mainChild.forEach(child => mainSection.removeChild(child));
+        console.log(mainChild);
         mainSection.appendChild(kindWrapper);
-    });
-    kind.addEventListener('mouseleave',()=>{
-        kind.style.backgroundColor ='white';
-        kind.style.color = 'black';
     });
 }
 
 
 function Info(){
-    const footer = document.getElementById('description');
+    // const projectbox = document.getElementById('content-grid');
+    const infobox = document.createElement('div');
     const time = document.createElement('div');
     const descr = document.createElement('p');
     const name = document.createElement('h3');
     time.setAttribute('id','time');
     descr.setAttribute('id','method');
     name.setAttribute('id','title');
-    footer.appendChild(name);
-    footer.appendChild(time);
-    footer.appendChild(descr);
+    infobox.appendChild(name);
+    infobox.appendChild(time);
+    infobox.appendChild(descr);
+    // projectbox.appendChild(infobox);
 }
-
+function GenerateInfo(){
+    let temp = document.getElementById('description');
+    let clone = temp.content.cloneNode(true);
+    let title = clone.getElementById('title');
+    let name = clone.getElementById('name');
+    let method = clone.getElementById('method');
+    
+}

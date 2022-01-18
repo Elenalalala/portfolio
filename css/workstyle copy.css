@@ -99,14 +99,10 @@ nav ul li a:hover{
     transition: 0.2s;
     cursor: pointer;
 }
-section{
-    flex:1;
-}
 section ul{
     position: fixed;
     top:40%;
     display:flex;
-    flex-direction: column;
     list-style: none;
     width:25%;
     border-right: 1px solid var(--maincolor);
@@ -115,6 +111,7 @@ section ul li{
     margin-top:20px;
     font-size: 20px;
     text-align: center;
+    width:300px;
     flex:1;
     padding: 3px 0;
     transition: 0.3s;
@@ -129,7 +126,7 @@ section ul li:hover{
 }
 
 #flex-wrapper{
-    display: flex;
+    /* display: flex; */
     /* margin: 200px 200px; */
     padding-top:10%;
     margin-left:100px;
@@ -139,9 +136,13 @@ section ul li:hover{
     flex:1.2;
     /* border:1px solid black; */
     /* height:680px; */
-    height: 50%;
-    width:800px;
-    overflow: scroll;
+    /* height: 70%;
+    width:70vw; */
+    /* overflow: scroll; */
+    display:grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    margin: 10vh 0;
 }
 #content-grid .drawings{
     width:100%;
@@ -152,13 +153,13 @@ section ul li:hover{
     top:15vh;
     text-align: center;
 } */
-#content-grid .drawings{
+/* #content-grid .drawings{
     width:100%;
     height:auto;
     margin-top:50px;
     margin-bottom:50px;
-}
-#content-grid .drawings:last-child{
+} */
+/* #content-grid .drawings:last-child{
     margin-bottom:150px;
 }
 #content-grid .drawings:nth-child(2){
@@ -169,31 +170,33 @@ section ul li:hover{
 }
 #content-grid .drawings:nth-child(4){
     margin-bottom:150px;
-}
+} */
 #content-grid .projectPic{
-    margin-bottom:50px;
+    width:100%;
+    height:100%;
+    object-fit:scale-down;
 }
-#descr-wrapper{
-    display:block;
+#content-grid a{
+    margin:0;
+    /* background-color: red; */
+    width:auto;
+    height: auto;
+}
+#description{
     position: fixed;
     /* z-index:2; */
-    /* background-color: red; */
     top:43%;
     right:55%;
     width: 200px;
     /* display:flex; */
     /* border-left: var(--maincolor) 1px solid; */
 }
-#method, #time{
+#description div, #description p{
     font-size:15px;
     margin-top: 10px;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 300;
     
-}
-.projectPic{
-    width:80%;
-    object-fit: cover;
 }
 @media all and (max-width: 1550px){
     #description{

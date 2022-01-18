@@ -87,7 +87,7 @@ header h1{
 }
 .inline-container .page{
     width:1500px;
-    height:65vh;
+    height:70vh;
     border:var(--secondary) 0.5px double;
     margin:0 100px; 
 }
@@ -98,6 +98,7 @@ header h1{
 .inline-container #home #text-container{
     margin-bottom: 20px;
     flex:1;
+    /* display:block; */
     padding-left: 15px;
     height:auto;
     /* padding-bottom:30px; */
@@ -204,12 +205,9 @@ nav ul li a:hover{
     transition: 0.2s;
     cursor: pointer;
 }
-@media all and (max-width: 1600px){
     #text-container{
         overflow:scroll;
     }
-
-}
 @media all and (max-width: 855px){
     .inline-container #home{
         display:flex;
