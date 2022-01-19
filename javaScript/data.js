@@ -7,7 +7,9 @@ const data ={
     "zero":"zero/zero.png",
     "nine":"nine/nineFeature.png",
     "mrYellow":"mrYellow/mrYellowFeature.jpg",
-    "bubbleGame":"bubbleGame/bubbleFeature.png"
+    "bubbleGame":"bubbleGame/bubbleFeature.png",
+    "wibe":"wibe/wibeFeatureImage.png",
+    "allEyes":""
     }, 
 "Title" : 
     {
@@ -17,7 +19,9 @@ const data ={
     "zero": "Emerging future: Zero Hunger",
     "nine": "九凤: The Nine Phoenix",
     "mrYellow":"Mr. Yellow: Egg Roll Company Branding",
-    "bubbleGame":"Face Detection Shooting Game"
+    "bubbleGame":"Face Detection Shooting Game",
+    "wibe":"Wibe: Enhanced Music Experience for Deaf Community",
+    "allEyes":""
     }, 
 "Time" :
     {
@@ -27,7 +31,9 @@ const data ={
     "zero": "2020 Fall",
     "nine": "2020 Spring",
     "mrYellow":"2020 Fall",
-    "bubbleGame":"2020 Spring"
+    "bubbleGame":"2020 Spring",
+    "wibe":"2021 Spring",
+    "allEyes":""
     },
 "Type" :
     {
@@ -37,7 +43,9 @@ const data ={
     "zero":"Group Project",
     "nine": "Collaboration with CHENYU MA",
     "mrYellow":"Individual Project",
-    "bubbleGame":"Individual Project"
+    "bubbleGame":"Individual Project",
+    "wibe":"Group Project",
+    "allEyes":""
     }, 
 "Duration" :
     {
@@ -47,7 +55,9 @@ const data ={
     "zero":"3 weeks",
     "nine": "2 weeks",
     "mrYellow":"1 week",
-    "bubbleGame":"1 week"
+    "bubbleGame":"1 week",
+    "wibe":"2 weeks",
+    "allEyes":""
     },
 "Skill" :
     {
@@ -57,7 +67,9 @@ const data ={
     "zero":["Figma", "communication skill", "graphic design", "systematic strategy design", "speculative design"],
     "nine": ["p5.js","laser cutting","collaboration"],
     "mrYellow":["Adobe Illustrator","Adobe Photoshop"],
-    "bubbleGame":["P5.js, clmtrackr.js, html/css, JavaScript"]
+    "bubbleGame":["P5.js, clmtrackr.js, html/css, JavaScript"],
+    "wibe":["Arduino + Serial Communication","Unity AR","VFX","iOS Development","FFT Mapping"],
+    "allEyes":[]
     }, 
 "Goal" :
     {
@@ -85,7 +97,11 @@ const data ={
     ],
     "bubbleGame":[
         "Explore the possibility of face detection technology."
-    ]
+    ],
+    "wibe":[
+        "Enhance music experience of deaf user even without a loudspeaker."
+    ],
+    "allEyes":[]
     },
 "Description" :
     {
@@ -153,6 +169,16 @@ const data ={
         "summary":["Use your mouth to shoot out bubbles. Do not hit the red square! Use clmtrackr.js, the face detection technology to track the position of your lips."],
         "inspiration":"",
         "process":""
+    },
+    "wibe":{
+        "summary":["Wibe utilizes modern AR technology to visualize music and sound. Additionally, we use vibration to reinforce the sense of music."],
+        "inspiration":"After reading 'Feel the music: Deaf people use 'mind's ear' to process vibrations' written by Erica Klarreich and watching an interview with deaf dancer Shaheem Sanchez, we were inspired to learn more about how to enhance deaf people's music experience.",
+        "process":""
+    },
+    "allEyes":{
+        "summary":["We were inspired by the theories of surveillance including Michel Foucault’s panopticism and Kevin D. Haggerty and Richard V. Ericson’s surveillant assemblage. In our multiplayer game, we want to explore and simulate an environment in which players play as the surveillant and targets of surveillance.","Player: Inspired by surveillant assemblage theory, we group the players into two forces:  the surveillant and targets of surveillance. The surveillant is symbolized as a dragon with a flaming eye on its back, and can only be played by one player; while the surveillance targets group is played by up to 4 players, and is synchronized as warriors. ", "Mission: For the surveillance targets group, the only way to win is to have at least one player survive till the end of the game. For the surveillant, their mission is to kill as many targets as possible before the game timer runs out.","Challenge: The surveillant is invincible. The only shortcoming of them is that they move slower than the surveillance targets. On the other hand, the surveillance targets are vulnerable and busy avoiding the attack from both the surveillant and the NPCs. Those NPCs will keep chasing the targets, nudging them, and injuring them until targets are killed. NPCs respawnable.", "Control: We made a customized controller for this game to create an immersive experience. To control the movements of a character in the game, simply rotate and flip the controller; to make the character attack, blow at the sensor attached to the controller--just like how a dragon blows a fireball! "],
+        "inspiration":"",
+        "process":"Networking: We used Photon PUN2 networking library to synchronize player movements, positions, health, damage, and animations. The game is run on a Photon engine. A script called Photon View syncs the parameters of assigned Observables (meaning the objects that own the parameters). To prevent the potential issue of position sync and smooth out the player movements, we used lerp to linearly interpolate between two values of player positions that are updated at a time difference.Generative Map: One of the other challenges is creating a generative map that varies in each round of the game. To accomplish this, we created a 7*7 matrix in the game world, and in each grid, there are certain possibilities to spawn a brick or an empty GameObject.Visual Elements: We designed different move mechanics for the dragon and the warriors and to better simulate their movements. For the dragon, its perspective is tern when it turns, so it feels like the dragon is hovering in the sky. For the warriors, we simply mapped it to the four directions of WASD keys. Since our main focus of this game is to explore and simulate the surveillance environment, we decided to make the graphic as little distracting as possible. We used simple black, white, and red color palette. To emphasize the topic of surveillance, we added flaming eyes on the dragon and the NPCs. Controller: The controller consists of a toggle switch to turn on/off the controller, an Arduino Leonardo board that does serial communication between sensors and the computer, an MPU 6050 that tracks motions with its 3-axis gyroscope, and an analog sound volume sensor which detects amplification of surrounding sound in decibel. To make sure the game is still accessible for people without the controller, we converted the serial data from Arduino to keyboard events: toggle on-> return key/start the game, toggle off -> escape key/leave the game, motions -> WASD keys/player movements, and if the sound volume exceeds the set threshold -> space key/attack. Eventually, we assembled and secured the components with solder, and installed them into a prototyped box. "
     }
     }, 
 "Pics" : 
@@ -178,6 +204,14 @@ const data ={
     "bubbleGame":{
         "process":["process1.png"],
         "product":["product1.png"]
+    },
+    "wibe":{
+        "process":["process0.png","process1.png","process2.png","process3.png","process4.png","process5.png","process6.png","process7.png","process8.png","process9.png"],
+        "product":["product0.png","product1.png","product2.png"]
+    },
+    "allEyes":{
+        "process":["process1.png","process2.png","process3.png","process4.png","process5.png","process6.png","process7.png"],
+        "product":["game1.png","game2.png","game3.png","game4.png"]
     }
 
     },
@@ -188,6 +222,8 @@ const data ={
     "zero":"<button><a href='https://www.figma.com/proto/WwgHZUXeUkcYsAB5cOw4zK/Zero-Hunger?node-id=2%3A3&scaling=scale-down'>Try it yourself!</a></button>",
     "nine":"<button><a href='https://editor.p5js.org/ElenaPeng/present/NfQzmGReK'>Listen to it Here</a></button>",
     "mrYellow":"",
-    "bubbleGame":"<button><a href='https://editor.p5js.org/ElenaPeng/sketches/2fkUfAt4_'>Play it Yourself</a></button>"
+    "bubbleGame":"<button><a href='https://editor.p5js.org/ElenaPeng/sketches/2fkUfAt4_'>Play it Yourself</a></button>",
+    "wibe":"<button><a href='https://youtu.be/d0omissrnxY'>Wibe Overview</a></button><br></br><button><a href='https://youtu.be/Vh5hMT604EA'>Full Music Video</a></button>",
+    "allEyes":"<button><a href='https://youtu.be/yU3K-O-Miws'>Demo Video</a></button><br></br><button><a href='https://youtu.be/AhU_IAZuanE'>Playtest Video</a></button><br></br><button><a href='https://mizardblack.itch.io/surveillance-escape'>Download Game</a></button>"
 }
 }

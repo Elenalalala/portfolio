@@ -205,9 +205,9 @@ nav ul li a:hover{
     transition: 0.2s;
     cursor: pointer;
 }
-    #text-container{
-        overflow:scroll;
-    }
+#text-container{
+    overflow:scroll;
+}
 @media all and (max-width: 855px){
     .inline-container #home{
         display:flex;

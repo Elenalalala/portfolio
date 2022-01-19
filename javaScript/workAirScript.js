@@ -2,14 +2,13 @@ var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyYdN7Jur6PIL9sJ'}).base('appSpjcbZHvKRY8O0');
 
 // Info();
-
+GenerateInfo();
 loadContent('dt');
 loadContent('experiment');
 loadContent('drawing');
 
 
 function loadContent(category){
-    GenerateInfo();
     const kind = document.getElementById(category);
     const mainSection = document.getElementById('content-grid'); 
     const kindWrapper = document.createElement('div');
@@ -38,29 +37,38 @@ function loadContent(category){
                     
 
             }else{
-                const type = record.get('Type');
-                const projectTitle = record.get('Name');
-                const link = document.createElement('a');
-                link.href = `project.html?${projectTitle}`;
-                image.setAttribute('class','projectPic');
-                image.src = record.get('Image')[0].url;
-                        image.addEventListener('mouseover', function(evt){
-                            imgDate.innerText = time;
-                            imgDescr.innerText = type;
-                            imgName.innerText = note;
-                            evt.target.style.backgroundColor = 'red';
-                            console.log("mouseoverrrrrr");
-                        });
-                link.appendChild(image);
-                kindWrapper.appendChild(link);
+                    const type = record.get('Type');
+                    const projectTitle = record.get('Name');
+                    const link = document.createElement('a');
+                    const infoSection = document.getElementById('descr-wrapper');
+                    link.href = `project.html?${projectTitle}`;
+                    image.setAttribute('class','projectPic');
+                    image.src = record.get('Image')[0].url;
 
-                if(category == 'dt'){
-                    // show default project when first landing // style the default categories
-                    mainSection.appendChild(kindWrapper);
-                    kind.style.backgroundColor ='rgb(202, 151, 20)';
-                    kind.style.color = 'white';
-                    }
-            }
+                    link.addEventListener('mouseenter', function(evt){
+                        imgDate.innerText = time;
+                        imgDescr.innerText = type;
+                        imgName.innerText = note;
+                        // evt.target.style.opacity = '0.7';
+                        evt.target.appendChild(infoSection);
+                        infoSection.classList.toggle('visible');
+                                
+                    });
+
+                    link.addEventListener('mouseleave',()=>{
+                        infoSection.classList.toggle('visible');
+                    });
+
+                    link.appendChild(image);
+                    kindWrapper.appendChild(link);
+
+                    if(category == 'dt'){
+                        // show default project when first landing // style the default categories
+                        mainSection.appendChild(kindWrapper);
+                        kind.style.backgroundColor ='rgb(202, 151, 20)';
+                        kind.style.color = 'white';
+                        }
+                }
         });
     
     }, function done(err) {
@@ -143,8 +151,7 @@ function Info(){
 function GenerateInfo(){
     let temp = document.getElementById('description');
     let clone = temp.content.cloneNode(true);
-    let title = clone.getElementById('title');
-    let name = clone.getElementById('name');
-    let method = clone.getElementById('method');
+    // template clone needs to be append into the html in order to be called in other places. 
     temp.parentNode.appendChild(clone);
+    // clone.style.display = 'none';
 }
