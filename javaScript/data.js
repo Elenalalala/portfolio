@@ -9,7 +9,8 @@ const data ={
     "mrYellow":"mrYellow/mrYellowFeature.jpg",
     "bubbleGame":"bubbleGame/bubbleFeature.png",
     "wibe":"wibe/wibeFeatureImage.png",
-    "allEyes":"allEyes/allEyes.png"
+    "allEyes":"allEyes/allEyes.png",
+    "cell":"cell/cellularFeatureImage.png"
     }, 
 "Title" : 
     {
@@ -21,7 +22,8 @@ const data ={
     "mrYellow":"Mr. Yellow: Egg Roll Company Branding",
     "bubbleGame":"Face Detection Shooting Game",
     "wibe":"Wibe: Enhanced Music Experience for Deaf Community",
-    "allEyes":"All Eyes On Us: Multiplayer Dungeon Game"
+    "allEyes":"All Eyes On Us: Multiplayer Dungeon Game",
+    "cell":"Vine Simulation:Cellular Automata"
     }, 
 "Time" :
     {
@@ -33,7 +35,8 @@ const data ={
     "mrYellow":"2020 Fall",
     "bubbleGame":"2020 Spring",
     "wibe":"2021 Spring",
-    "allEyes":"2021 Spring"
+    "allEyes":"2021 Spring",
+    "cell":"2021 Spring"
     },
 "Type" :
     {
@@ -45,7 +48,8 @@ const data ={
     "mrYellow":"Individual Project",
     "bubbleGame":"Individual Project",
     "wibe":"Group Project",
-    "allEyes":"Group Project"
+    "allEyes":"Group Project",
+    "cell":"Individual Project"
     }, 
 "Duration" :
     {
@@ -57,7 +61,8 @@ const data ={
     "mrYellow":"1 week",
     "bubbleGame":"1 week",
     "wibe":"2 weeks",
-    "allEyes":"3 weeks"
+    "allEyes":"3 weeks",
+    "cell":"2 weeks"
     },
 "Skill" :
     {
@@ -69,7 +74,8 @@ const data ={
     "mrYellow":["Adobe Illustrator","Adobe Photoshop"],
     "bubbleGame":["P5.js, clmtrackr.js, html/css, JavaScript"],
     "wibe":["Arduino + Serial Communication","Unity AR","VFX","iOS Development","FFT Mapping"],
-    "allEyes":["Unity", "Photon PUN2 Network", "AI Navigation + NPC Auto Chasing", "Generative Map","Arduino"]
+    "allEyes":["Unity", "Photon PUN2 Network", "AI Navigation + NPC Auto Chasing", "Generative Map","Arduino"],
+    "cell":["Unity","L-systems","Cellular Automata","Game of Life"]
     }, 
 "Goal" :
     {
@@ -104,6 +110,9 @@ const data ={
     "allEyes":[
         "Explore multiplayer game",
         "Simulate a surveillance environment"
+    ],
+    "cell":[
+        "Mimic the growth of the vine"
     ]
     },
 "Description" :
@@ -111,7 +120,7 @@ const data ={
     "cornStarch":{
         "summary":["This is a bio-design research project that explore the various properties of bioplastics and the possible application bio-degradable materials.","Corn to Cornucopia Jewelry Collection breaks through the stereotypical notion of jewels, exploring the possibility and the organic and exotic beauty of the most mundane, corn starch.","The collection of jewelries is only composed of corn starch bioplastics pieces, copper wire for wearable purposes, cohesion and some pearls. The relatively abstract look embraces the conformation of flowers and the notion of nature since the major component of it is natural."],
 
-        "inspiration":"When I was a kid, my grandma showed me the magic property of sweet potato starch, but it was only for food purpose. I didn’t know that something organic can feel and look synthetic until my professor, Shuyi Cao brought all the bioplastics experiments of wired organic shapes to class. I could not guess what material they were made of. Her experimental pieces inspired me to research more about the possibility corn starch.," ,
+        "inspiration":"When I was a kid, my grandma showed me the magic property of sweet potato starch, but it was only for food purpose. I did not know that something organic can feel and look synthetic until my professor, Shuyi Cao brought all the bioplastics experiments of wired organic shapes to class. I could not guess what material they were made of. Her experimental pieces inspired me to research more about the possibility corn starch.," ,
 
         "process":"In the research process, I experimented in my kitchen and refined the recipe of bioplastics into different textures for various uses, creating food-graded and disposable alternatives for plastics and biodegradable plastics."
     },
@@ -182,6 +191,11 @@ const data ={
         "summary":["All Eyes On Us is a multiplayer dungeon game made with Unity, using Photon PUN2 networking library, and controller by custom-built contorllers.","We were inspired by the theories of surveillance including Michel Foucault’s panopticism and Kevin D. Haggerty and Richard V. Ericson’s surveillant assemblage. In our multiplayer game, we want to explore and simulate an environment in which players play as the surveillant and targets of surveillance.","Player: Inspired by surveillant assemblage theory, we group the players into two forces:  the surveillant and targets of surveillance. The surveillant is symbolized as a dragon with a flaming eye on its back, and can only be played by one player; while the surveillance targets group is played by up to 4 players, and is synchronized as warriors. ", "Mission: For the surveillance targets group, the only way to win is to have at least one player survive till the end of the game. For the surveillant, their mission is to kill as many targets as possible before the game timer runs out.","Challenge: The surveillant is invincible. The only shortcoming of them is that they move slower than the surveillance targets. On the other hand, the surveillance targets are vulnerable and busy avoiding the attack from both the surveillant and the NPCs. Those NPCs will keep chasing the targets, nudging them, and injuring them until targets are killed. NPCs respawnable.", "Control: We made a customized controller for this game to create an immersive experience. To control the movements of a character in the game, simply rotate and flip the controller; to make the character attack, blow at the sensor attached to the controller--just like how a dragon blows a fireball! "],
         "inspiration":"",
         "process":"Networking: We used Photon PUN2 networking library to synchronize player movements, positions, health, damage, and animations. The game is run on a Photon engine. A script called Photon View syncs the parameters of assigned Observables (meaning the objects that own the parameters). To prevent the potential issue of position sync and smooth out the player movements, we used lerp to linearly interpolate between two values of player positions that are updated at a time difference.Generative Map: One of the other challenges is creating a generative map that varies in each round of the game. To accomplish this, we created a 7*7 matrix in the game world, and in each grid, there are certain possibilities to spawn a brick or an empty GameObject.Visual Elements: We designed different move mechanics for the dragon and the warriors and to better simulate their movements. For the dragon, its perspective is tern when it turns, so it feels like the dragon is hovering in the sky. For the warriors, we simply mapped it to the four directions of WASD keys. Since our main focus of this game is to explore and simulate the surveillance environment, we decided to make the graphic as little distracting as possible. We used simple black, white, and red color palette. To emphasize the topic of surveillance, we added flaming eyes on the dragon and the NPCs. Controller: The controller consists of a toggle switch to turn on/off the controller, an Arduino Leonardo board that does serial communication between sensors and the computer, an MPU 6050 that tracks motions with its 3-axis gyroscope, and an analog sound volume sensor which detects amplification of surrounding sound in decibel. To make sure the game is still accessible for people without the controller, we converted the serial data from Arduino to keyboard events: toggle on-> return key/start the game, toggle off -> escape key/leave the game, motions -> WASD keys/player movements, and if the sound volume exceeds the set threshold -> space key/attack. Eventually, we assembled and secured the components with solder, and installed them into a prototyped box. "
+    },
+    "cell":{
+        "summary":["This project is a natural simulation of cactus, sand, cloud, Game of Life, plant of my choice, and stone.","You will first press the selected key to choose what kind of “cells” they want to draw on the screen. Then, you can use your mouse. Press and drag to draw the selected type of “cell”. At first, the map will randomly generate Game of Life cell as a base, but it might die away because there are not enough of them to generate a strong cluster. The cactus will not grow as high as the vine. The sand will fall to the ground. The cloud will float to the sky and if there are multiple clouds, they will generate rain. Rain can help cactus and vine grow. There is a possibility of blooming flower. The GOL cell will check around its neighbors, if there are certain number of neighbors, they will populate. Otherwise, they will gradually age and die. The flower will grow if there is water or if there is a cluster of vine. The cluster of flowers are limited to 20 flower cells, preventing them to over spawn. Another interactivity is between stone and water. The water has a small possibility of turning a single stone to sand as if the water penetrate through the stone. However, the stone could not stop a growing vine, just like in nature, concrete never stops a strong plant."],
+        "inspiration":"The vine incorporates the concept of L-system and cellular automata. However, I didn’t fully implement the L-system because I doesn’t look realistic with the current system I have. I was going to incorporate time in the scene, but I failed to set the skybox color via script. So, I ended up choosing this sunset color because I thought it looks beautiful and natural. This color also reminds me of the time I found that plant of inspiration.",
+        "process":"Cellular Automata and L-system gives me a lot of insight of nature, which makes me wonder if our world is coded by someone somehow. I guess, when we really understand how everything work in nature, we will have a true AI of our own."
     }
     }, 
 "Pics" : 
@@ -215,6 +229,10 @@ const data ={
     "allEyes":{
         "process":["process1.png","process2.png","process3.png","process4.png","process5.png","process6.png","process7.png"],
         "product":["game1.png","game2.png","game3.png","game4.png"]
+    },
+    "cell":{
+        "process":[""],
+        "product":[""]
     }
 
     },
@@ -227,6 +245,7 @@ const data ={
     "mrYellow":"",
     "bubbleGame":"<button><a href='https://editor.p5js.org/ElenaPeng/sketches/2fkUfAt4_'>Play it Yourself</a></button>",
     "wibe":"<button><a href='https://youtu.be/d0omissrnxY'>Wibe Overview</a></button><br></br><button><a href='https://youtu.be/Vh5hMT604EA'>Full Music Video</a></button>",
-    "allEyes":"<button><a href='https://youtu.be/yU3K-O-Miws'>Demo Video</a></button><br></br><button><a href='https://youtu.be/AhU_IAZuanE'>Playtest Video</a></button><br></br><button><a href='https://mizardblack.itch.io/surveillance-escape'>Download Game</a></button>"
+    "allEyes":"<button><a href='https://youtu.be/yU3K-O-Miws'>Demo Video</a></button><br></br><button><a href='https://youtu.be/AhU_IAZuanE'>Playtest Video</a></button><br></br><button><a href='https://mizardblack.itch.io/surveillance-escape'>Download Game</a></button>",
+    "cell":"<iframe width='560' height='315' src='https://www.youtube.com/embed/PB8ucleUjKg' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br></br><button><a href='https://elenapeng.itch.io/cellular-automataplant-simulation'>Play it Yourself</a></button>"
 }
 }
