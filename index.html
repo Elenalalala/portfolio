@@ -15,9 +15,14 @@
     <header>
         <h1><a href = "index.html">ELENA PENG</a></h1>
             <ul id="contact">
-            <li><img src="assets/wechat.png"><p>pxyelenayue324</p></li>
-            <li><img src="assets/ins.jpg"><p>@pexlana_yue</p></li>
-            <li><img src="assets/gmail.png"><p>pengx091@newschool.edu</p></li>
+            <li><img id="linkedin" src="assets/linkedin.png" alt="linkedin" style="width:30px;height:30px;"></li>
+            <li>
+                <img id="github" src="assets/github.png" alt="github" style="width:30px;height:30px;">
+            </li>
+            <li>
+                <img id="gmail" src="assets/gmail.png" alt="gmail" style="width:30px;height:30px;">
+                <div id="hoverCopyAlert">Copied!</div>
+            </li>
         </ul>
     </header>
     <section class="inline-container">
@@ -25,12 +30,10 @@
 
             <div id="text-container">
                 <h2>Hi there,</h2>
-                <h3>I'm Elena 彭心玥</h3>
+                <h3>I'm Xinyue Elena Peng</h3>
                 <p class="hook">I'm a coder with an artist heart.</p>
-                <p class="hook">我是一个喜欢艺术的码农。</p>
-                <p>I am a <b>creative technologist</b> and <b>font-end web developer </b>based in China and New York. I develop design & technical skills at Parsons, the School of Design, studying <b>Design + Technology</b>. <br>I have a board interests in <b>web dev & design</b>, <b>illustration</b> and <b>photography</b>. I enjoy challenges and solving coding problems for others. I have helped many peers to solve their coding issue as a tutor. I also enjoy exploring new technology and new method to express my idea.
+                <p>I am a <b>software engineer</b> and <b>creative technologist </b>based in Philadelphia. I'm currently a master student majoring in <b>Computer and Info Tech(MCIT)</b> @UPenn. I graduated from <b>Design + Technology</b> @Parsons in May 2022. I'm interested in AR/VR development and Game development and have experience across the end-to-end life cycle of <b>AR iOS App development</b>. I'm currently seeking a <b>summer internship</b> in software engineering, preferably in AR Game.
                 </p>
-                <p>我生活在中国广东和纽约，是一名创意多媒体设计师和网页前端开发。现于<b>帕森斯设计学院本科</b>大三在读。专业是<b>设计与科技</b>。我对<b>网页设计开发</b>，<b>插图</b>，和<b>摄影</b>有浓厚的兴趣。我勇于探索和挑战，曾担任本专业辅导员，帮助同学解决代码问题。我乐于尝试新兴科技，探索他们新的用途并服务于创意本身。</p>
                 <button id="checkWork"><a href ="work.html">Check out my work</a></button>
             </div>
             <div id="feature-container">
@@ -46,6 +49,41 @@
             <li><a href ="work.html">Work</a></li>
         </ul>
     </nav>
+    <script>
+        let linkedinIcon = document.getElementById("linkedin");
+        linkedinIcon.addEventListener("click", ()=>openWindow("https://www.linkedin.com/in/elena-xinyue-peng-8b7a0a173/"));
 
+        let githubIcon = document.getElementById("github");
+        githubIcon.addEventListener("click", ()=>openWindow("https://github.com/Elenalalala"));
+
+        let gmailIcon = document.getElementById("gmail");
+        gmailIcon.addEventListener("click", copyClipboard);
+
+        function copyClipboard() {
+          // Copy the text inside the text field
+          navigator.clipboard.writeText("pexy@seas.upenn.edu");
+          console.log("copied email");
+
+        }
+        function openWindow(url){
+            window.open(url, "_blank");
+        }
+
+        let copyAlert = document.getElementById("hoverCopyAlert");
+        let openAlert = document.getElementById("hoverOpenAlert");
+
+        gmailIcon.addEventListener("click", ()=>toggleAlert(copyAlert,true));
+
+
+        gmailIcon.addEventListener("mouseleave", ()=>toggleAlert(copyAlert,false));
+
+        function toggleAlert(target, input){
+            if(input){
+                target.style.display = "inherit";
+            }else{
+                target.style.display = "none";
+            }
+        }
+        </script>
 </body>
 </html>

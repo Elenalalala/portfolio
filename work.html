@@ -17,9 +17,9 @@
     <header>
         <h1><a href = "index.html">ELENA PENG</a></h1>
             <ul id="contact">
-            <li><img src="assets/wechat.png"><p>pxyelenayue324</p></li>
-            <li><img src="assets/ins.jpg"><p>@pexlana_yue</p></li>
-            <li><img src="assets/gmail.png"><p>pengx091@newschool.edu</p></li>
+            <li><img id="linkedin" src="assets/linkedin.png" alt="linkedin" style="width:30px;height:30px;"></li>
+            <li><img id="github" src="assets/github.png" alt="github" style="width:30px;height:30px;"></li>
+            <li><img id="gmail" src="assets/gmail.png" alt="gmail" style="width:30px;height:30px;"><div id="hoverCopyAlert">Copied!</div></li>
         </ul>
     </header>
     <div id="flex-wrapper">
@@ -47,5 +47,40 @@
             <li><a href ="work.html">Work</a></li>
         </ul>
     </nav>
+    <script>
+        let linkedinIcon = document.getElementById("linkedin");
+        linkedinIcon.addEventListener("click", ()=>openWindow("https://www.linkedin.com/in/elena-xinyue-peng-8b7a0a173/"));
+
+        let githubIcon = document.getElementById("github");
+        githubIcon.addEventListener("click", ()=>openWindow("https://github.com/Elenalalala"));
+
+        let gmailIcon = document.getElementById("gmail");
+        gmailIcon.addEventListener("click", copyClipboard);
+
+        function copyClipboard() {
+          // Copy the text inside the text field
+          navigator.clipboard.writeText("pexy@seas.upenn.edu");
+          console.log("copied email");
+
+        }
+        function openWindow(url){
+            window.open(url, "_blank");
+        }
+
+        let copyAlert = document.getElementById("hoverCopyAlert");
+
+        gmailIcon.addEventListener("click", ()=>toggleAlert(copyAlert,true));
+
+
+        gmailIcon.addEventListener("mouseleave", ()=>toggleAlert(copyAlert,false));
+
+        function toggleAlert(target, input){
+            if(input){
+                target.style.display = "inherit";
+            }else{
+                target.style.display = "none";
+            }
+        }
+        </script>
 </body>
 </html>

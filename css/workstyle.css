@@ -52,29 +52,43 @@ header h1 a{
     letter-spacing: 0.2em;
 }
 #contact {
-    flex:2;
+    flex:0.5;
     display: flex;
     margin-top: 40px;
     margin-right:5%;
+    position:static;
 }
 #contact li{
-    flex:0.5;
-    width:80%;
+    flex:0.9;
+    /* width:80%; */
     display:flex;
-    margin-right:8px;
+    /* margin-right:8px; */
 }
 #contact li img{
-    width:20px;
-    height:20px;
-    margin-right:8px;
+    display:block;
+    margin-right:auto;
+    margin-left: auto;
     filter:contrast(100%);
     filter:grayscale(100%);
+}
+#contact li img:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
 }
 #contact li p{
     color:var(--maincolor);
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 16px;
     text-transform: lowercase;
+}
+#hoverCopyAlert{
+    display: none;
+    position: absolute;
+    width:auto;
+    height:20px;
+    color:var(--bg);
+    font-family: 'Alegreya Sans', sans-serif; 
+    font-size: 16px;
 }
 nav{
     background-color: var(--bg);
@@ -247,11 +261,17 @@ section ul li:hover{
         padding-bottom: 10px;
     }
     #contact{
-        flex-direction: column;
+        /* flex-direction: column; */
         margin: 20px 5px;
         margin: 0 20%;
         margin-bottom: 20px;
     }
+    /* #contact li{
+        flex:0.9;
+        display:block;
+        position: static;
+        margin: 0 5% 0 5%;
+    } */
     #contact li p{
         font-size: 12px;
     }
