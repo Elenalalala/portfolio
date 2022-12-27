@@ -44,10 +44,10 @@ header h1 a{
 }
 #contact li{
     flex:0.9;
-    /* width:80%; */
+    width:80px;
     display:block;
     /* margin-right:8px; */
-    position: static;
+    position: relative;
 }
 #contact li img{
     display:block;
@@ -71,8 +71,12 @@ header h1 a{
     position: absolute;
     width:auto;
     height:20px;
-    color:var(--bg);
+    left:50%;
+    top:80%;
+    transform: translate(-50%, -50%);
+    color:var(--secondary);
     font-family: 'Alegreya Sans', sans-serif; 
+    font-weight: bold;
     font-size: 16px;
 }
 #content{
@@ -225,8 +229,18 @@ nav ul li a:hover{
     #contact{
         /* flex-direction: column; */
         margin: 20px 5px;
-        margin: 0 40%;
+        margin: 0 20%;
         margin-bottom: 20px;
+    }
+    #contact li{
+        flex:0.9;
+        width:80px;
+        display:block;
+        position: relative;
+        height:100%;
+    }
+    #hoverCopyAlert{
+        top:120%;
     }
     #contact li p{
         font-size: 12px;
@@ -247,5 +261,8 @@ nav ul li a:hover{
     iframe{
         width:380px;
         height:250px;
+    }
+    #featureImage{
+        padding-top:50%;
     }
 }

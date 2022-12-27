@@ -19,7 +19,10 @@
             <ul id="contact">
             <li><img id="linkedin" src="assets/linkedin.png" alt="linkedin" style="width:30px;height:30px;"></li>
             <li><img id="github" src="assets/github.png" alt="github" style="width:30px;height:30px;"></li>
-            <li><img id="gmail" src="assets/gmail.png" alt="gmail" style="width:30px;height:30px;"><div id="hoverCopyAlert">Copied!</div></li>
+            <li>
+                <img id="gmail" src="assets/gmail.png" alt="gmail" style="width:30px;height:30px;">
+                <div id="hoverCopyAlert">Copied!</div>
+            </li>
         </ul>
 </header>
     <main id= "content">
@@ -76,7 +79,6 @@
     }
 
     let copyAlert = document.getElementById("hoverCopyAlert");
-    let openAlert = document.getElementById("hoverOpenAlert");
 
     gmailIcon.addEventListener("click", ()=>toggleAlert(copyAlert,true));
 
