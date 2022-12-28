@@ -24,9 +24,14 @@ function loadContent(category){
             const note = record.get('Notes');
             const type = record.get('Type');
             const projectTitle = record.get('Name');
-            const link = document.createElement('a');
             const infoSection = document.getElementById('descr-wrapper');
-            link.href = `project.html?${projectTitle}`;
+            const link = document.createElement('a');
+            if(category == 'drawing'){
+                link.href = 'javascript: void(0)';
+                link.style.cursor = 'default';
+            }else{
+                link.href = `project.html?${projectTitle}`;
+            }
             image.setAttribute('class','projectPic');
             image.src = record.get('Image')[0].url;
 
