@@ -29,6 +29,8 @@ function loadContent(category){
             if(category == 'drawing'){
                 link.href = 'javascript: void(0)';
                 link.style.cursor = 'default';
+            }else if(projectTitle == 'monster'){
+                link.href = 'https://parsons.edu/dt-2022/monster-zone/';
             }else{
                 link.href = `project.html?${projectTitle}`;
             }
